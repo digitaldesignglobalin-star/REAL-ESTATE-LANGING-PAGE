@@ -109,3 +109,71 @@ document.addEventListener('keydown', (e) => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// download model
+// Brochure Download Form
+document.addEventListener("DOMContentLoaded", function () {
+
+  const nameInput = document.getElementById("userName");
+  const phoneInput = document.getElementById("userPhone");
+  const emailInput = document.getElementById("userEmail");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const form = document.getElementById("downloadForm");
+
+  function validateForm() {
+    const nameValid = nameInput.value.trim().length > 2;
+
+    const phoneRegex = /^[0-9]{10}$/;   // EXACTLY 10 digits
+    const phoneValid = phoneRegex.test(phoneInput.value);
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailValid = emailRegex.test(emailInput.value);
+
+    if (nameValid && phoneValid && emailValid) {
+      downloadBtn.disabled = false;
+    } else {
+      downloadBtn.disabled = true;
+    }
+  }
+
+  nameInput.addEventListener("input", validateForm);
+  phoneInput.addEventListener("input", validateForm);
+  emailInput.addEventListener("input", validateForm);
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (!downloadBtn.disabled) {
+
+      // Start Download
+      window.location.href = "assets/UTTAR GAURIPUR - PROJECT PLAN.pdf";
+
+      // Close Modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
+      modal.hide();
+
+      form.reset();
+      downloadBtn.disabled = true;
+    }
+  });
+
+});
+
