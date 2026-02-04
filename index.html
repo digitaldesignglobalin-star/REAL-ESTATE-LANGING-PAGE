@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATELIER</title>
+
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./css-folder/style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top px-lg-5 py-3 transition-nav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold fs-3" href="#"
+          >LUXE<span class="text-primary">ABODE</span></a
+        >
+
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+        >
+          <span class="fas fa-bars fs-2 text-white"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto align-items-center">
+            <li class="nav-item px-3">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">Gallery</a>
+            </li>
+            <li class="nav-item px-3">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-4">
+    <a href="tel:+919876543210" class="nav-contact text-decoration-none">
+        <i class="fas fa-phone-alt me-2"></i>
+        <span class="nav-phone-number">+91 98765 43210</span>
+    </a>
+</li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- hero section  -->
+      <section class="hero-viewport" id="home">
+        <div class="hero-media-wrapper">
+          <img
+            src="./assets/img-4.jpeg"
+            alt="Estate Land Development"
+            class="hero-main-image"
+          />
+
+          <div class="hero-bottom-vignette"></div>
+        </div>
+
+        <a
+          href="#about"
+          class="hero-scroll-trigger"
+          aria-label="Scroll to Content"
+        >
+          <div class="mouse-container">
+            <div class="mouse-frame">
+              <div class="mouse-wheel"></div>
+            </div>
+            <span class="mouse-hint">EXPLORE</span>
+          </div>
+        </a>
+      </section>
+
+      <!-- Prime Land & Plots -->
+      <section
+        class="snap-section bg-white section-spacing"
+        id="locality-contact"
+      >
+        <div class="container-fluid h-100 p-0">
+          <div class="row g-0 h-100">
+            <div class="col-lg-6 map-viewport">
+              <div class="map-inner-container h-100 position-relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.22!2d76.69!3d30.71!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDQyJzM2LjAiTiA3NsKwNDEnMjQuMCJF!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin"
+                  class="h-100 w-100 border-0"
+                  allowfullscreen=""
+                  loading="lazy"
+                >
+                </iframe>
+
+                <!-- <div class="locality-card-clean reveal">
+                        <span class="text-primary fw-bold small tracking-widest d-block mb-1">STRATEGIC LOCATION</span>
+                        <h4 class="text-dark fw-bold mb-2">Heritage District</h4>
+                        <p class="small text-muted mb-0">Close proximity to International Airport & Financial Hub.</p>
+                    </div> -->
+              </div>
+            </div>
+
+            <div class="col-lg-6 d-flex align-items-center">
+              <div class="form-wrapper luxury-form-card w-100 reveal">
+
+                <div class="form-header mb-5">
+                  <h6
+                    class="text-primary fw-bold tracking-widest small mb-2 text-uppercase"
+                  >
+                    Direct Enquiry
+                  </h6>
+                  <h2 class="display-6 fw-bold text-dark">
+                    Get in Touch with <br /><span class="text-blue-outline-thin"
+                      >Our Land Experts</span
+                    >
+                  </h2>
+                </div>
+
+                <form class="row g-4">
+                  <div class="col-md-6">
+                    <div class="input-group-luxe">
+                      <label class="small fw-bold text-muted mb-2"
+                        >FULL NAME</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control luxe-field"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-group-luxe">
+                      <label class="small fw-bold text-muted mb-2"
+                        >CONTACT NUMBER</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control luxe-field"
+                        placeholder="+91 00000 00000"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="input-group-luxe">
+                      <label class="small fw-bold text-muted mb-2"
+                        >PLOT CATEGORY</label
+                      >
+                      <select class="form-select luxe-field">
+                        <option>Residential Estate</option>
+                        <option>Commercial Zone</option>
+                        <option>Agricultural Land</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-5">
+                    <button
+                      type="submit"
+                      class="btn btn-primary w-100 rounded-0 py-3 shadow-premium"
+                    >
+                      SUBMIT INTEREST
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- gallery section  -->
+      <section class="visual-inventory u-scroll-snap" id="portfolio-gallery">
+        <div
+          class="container h-100 d-flex flex-column justify-content-center py-5"
+        >
+          <header class="visual-inventory__header row mb-5 reveal">
+            <div class="col-12 text-center">
+              <div
+                class="d-flex justify-content-center align-items-center mb-2"
+              >
+                <div class="visual-inventory__accent-line"></div>
+                <span class="visual-inventory__subtitle"
+                  >CURATED COLLECTION</span
+                >
+                <div class="visual-inventory__accent-line"></div>
+              </div>
+              <h2 class="visual-inventory__title display-4 fw-bold text-dark">
+                Strategic <span class="text-outline-blue">Portfolio</span>
+              </h2>
+            </div>
+          </header>
+
+          <div class="visual-inventory__grid row g-3 reveal">
+            <div class="col-lg-4 col-md-6">
+              <figure class="visual-card">
+                <div class="visual-card__wrapper">
+                  <img
+                    src="./assets/img-7.jpeg"
+                    alt="Estate 1"
+                    class="visual-card__img gallery-img"
+                  />
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <figure class="visual-card">
+                <div class="visual-card__wrapper">
+                  <img
+                    src="./assets/img-2.jpeg"
+                    alt="Estate 2"
+                    class="visual-card__img gallery-img"
+                  />
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <figure class="visual-card">
+                <div class="visual-card__wrapper">
+                  <img
+                    src="./assets/img-3.jpeg"
+                    alt="Estate 3"
+                    class="visual-card__img gallery-img"
+                  />
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <figure class="visual-card">
+                <div class="visual-card__wrapper">
+                  <img
+                    src="./assets/img-4.jpeg"
+                    alt="Estate 4" 
+                    class="visual-card__img gallery-img"
+                  />
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <figure class="visual-card">
+                <div class="visual-card__wrapper">
+                  <img
+                    src="./assets/img-5.jpeg"
+                    alt="Estate 5"
+                    class="visual-card__img gallery-img"
+                  />
+                </div>
+              </figure>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+              <figure class="visual-card">
+                <div class="visual-card__wrapper">
+                  <img
+                    src="./assets/img-6.jpeg"
+                    alt="Estate 6"
+                    class="visual-card__img gallery-img"
+                  />
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pdf-showcase u-scroll-snap" id="brochure-view">
+        <div
+          class="container h-100 d-flex flex-column justify-content-center py-5"
+        >
+          <header class="pdf-showcase__header text-center mb-4 reveal">
+            <span class="pdf-showcase__label">OFFICIAL PUBLICATION</span>
+            <h2 class="pdf-showcase__title display-5 fw-bold text-dark">
+              Investment <span class="text-outline-blue">Portfolio 2026</span>
+            </h2>
+          </header>
+
+          <div class="pdf-showcase__reader reveal">
+            <div class="pdf-showcase__frame">
+              <!-- <div class="pdf-showcase__toolbar">
+                <div class="pdf-showcase__controls">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="pdf-showcase__filename">
+                  LuxeAbode_Strategic_Report.pdf
+                </div>
+              </div> -->
+
+              <div class="pdf-showcase__viewport">
+                <img
+                  src="./assets/Screenshot 2026-02-03 182225.png"
+                  alt="Full PDF Content"
+                  class="pdf-showcase__img"
+                />
+
+                <!-- <div class="pdf-showcase__hint">
+                        <i class="fas fa-chevron-down me-2"></i> SCROLL TO READ
+                    </div> -->
+              </div>
+            </div>
+          </div>
+
+          <footer class="pdf-showcase__actions mt-5 reveal">
+            <div
+              class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-4"
+            >
+              <a
+                href="assets/UTTAR GAURIPUR - PROJECT PLAN.pdf"
+                target="_blank"
+                class="pdf-showcase__btn pdf-showcase__btn--primary"
+              >
+                <i class="fas fa-eye me-2"></i> VIEW FULL PDF
+              </a>
+              <a
+                href="assets/UTTAR GAURIPUR - PROJECT PLAN.pdf"
+                download
+                class="pdf-showcase__btn pdf-showcase__btn--outline"
+              >
+                <i class="fas fa-download me-2"></i> DOWNLOAD COPY
+              </a>
+            </div>
+            <p class="pdf-showcase__meta text-center mt-3 text-muted small">
+              Updated February 2026 • 4.5MB • PDF Format
+            </p>
+          </footer>
+        </div>
+      </section>
+
+      <!-- snap-section -->
+
+      <!-- <section class="snap-section bg-white section-padding-y" id="plot-gallery">
+    <div class="container h-100 d-flex flex-column justify-content-center">
+        
+        <div class="row mb-5 reveal">
+            <div class="col-lg-8">
+                <h6 class="text-primary fw-bold tracking-widest mb-3 text-uppercase">Exclusive Land Parcels</h6>
+                <h2 class="display-5 fw-bold text-dark">Investment <span class="text-blue-outline">Opportunities</span></h2>
+            </div>
+            <div class="col-lg-4 text-lg-end d-flex align-items-end justify-content-lg-end mt-3">
+                <p class="text-muted small border-start border-primary ps-3 mb-0">Curated plots with 100% legal clearance and high growth potential.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 h-75">
+            <div class="col-lg-7 reveal">
+                <div class="plot-card featured h-100">
+                    <div class="plot-badge">PREMIUM</div>
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Plots">
+                    <div class="plot-info-glass">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <div>
+                                <h4 class="fw-bold mb-1">Oakwood Highlands</h4>
+                                <p class="small mb-0 opacity-75"><i class="fas fa-location-dot me-2"></i>Prime North Zone</p>
+                            </div>
+                            <div class="text-end">
+                                <span class="d-block small opacity-75">Starting at</span>
+                                <span class="h4 fw-bold text-primary">$290,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="row g-4 h-100">
+                    <div class="col-12 h-50 reveal" style="transition-delay: 0.2s;">
+                        <div class="plot-card h-100">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Plots">
+                            <div class="plot-info-minimal">
+                                <h5 class="fw-bold text-white mb-0">Sector 12 Business Plot</h5>
+                                <span class="text-primary fw-bold small">Commercial Zone</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 h-50 reveal" style="transition-delay: 0.3s;">
+                        <div class="plot-card h-100">
+                            <div class="plot-content-only h-100 d-flex flex-column justify-content-center p-4">
+                                <h5 class="fw-bold text-dark">Can't find what you're looking for?</h5>
+                                <p class="text-muted small">We have over 50+ off-market plots in our private database.</p>
+                                <button class="btn btn-primary rounded-0 py-3 mt-3 shadow-blue">Request Private List</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="snap-section bg-white" id="plot-gallery">
+    <div class="container h-100 py-6 d-flex flex-column justify-content-center">
+        
+        <div class="row mb-5 reveal">
+            <div class="col-lg-12">
+                <div class="d-flex align-items-center mb-3">
+                    <div class="blue-line-accent me-3"></div>
+                    <span class="text-primary fw-bold tracking-widest small uppercase">Plot Portfolio</span>
+                </div>
+                <h2 class="display-5 fw-bold text-dark">Strategic <span class="text-outline-blue">Land Inventory</span></h2>
+                <p class="text-muted mt-3 mb-0">A curated selection of high-yield residential and commercial plots.</p>
+            </div>
+        </div>
+
+        <div class="row g-4 flex-grow-1">
+            
+            <div class="col-lg-7 h-100-lg reveal">
+                <div class="gallery-container h-100">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80" alt="Primary Plot" class="gallery-image">
+                    <div class="gallery-content-overlay p-5">
+                        <span class="badge bg-primary rounded-0 px-3 py-2 mb-3">AVAILABLE</span>
+                        <h3 class="fw-bold text-white mb-2">Oakwood Estates - Block A</h3>
+                        <div class="d-flex gap-4 text-white-50 small">
+                            <span><i class="fas fa-expand me-2"></i>5,000 Sq.Ft</span>
+                            <span><i class="fas fa-road me-2"></i>60ft Road</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="row g-4 h-100">
+                    <div class="col-12 h-50-lg reveal" style="transition-delay: 0.1s;">
+                        <div class="gallery-container h-100">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Sub Plot" class="gallery-image">
+                            <div class="gallery-content-overlay p-4">
+                                <h5 class="fw-bold text-white mb-1">Commercial Hub P.12</h5>
+                                <span class="text-primary fw-bold small">Business Zoning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 h-50-lg reveal" style="transition-delay: 0.2s;">
+                        <div class="gallery-container h-100">
+                            <img src="https://images.unsplash.com/photo-1500322969630-a26ab6eb64cc?auto=format&fit=crop&w=800&q=80" alt="Sub Plot" class="gallery-image">
+                            <div class="gallery-content-overlay p-4">
+                                <h5 class="fw-bold text-white mb-1">The Azure Farmland</h5>
+                                <span class="text-primary fw-bold small">Investment Grade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> -->
+    </main>
+
+
+    <!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+
+    <img class="lightbox-img" id="lightbox-img">
+
+    <button class="lightbox-prev">&#10094;</button>
+    <button class="lightbox-next">&#10095;</button>
+</div>
+
+
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js-folder/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,693 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+:root {
+    --primary: #007bff;
+    --dark: #0a0a0a;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--dark);
+    color: white;
+}
+
+/* Navbar */
+.transition-nav {
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.navbar-scrolled {
+    background: rgba(10, 10, 10, 0.9);
+    backdrop-filter: blur(15px);
+    padding: 10px 0 !important;
+}
+
+/* Hero Slider */
+.carousel-item {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+.carousel-caption {
+    top: 30%;
+    bottom: auto;
+}
+
+/* Slide Entry Animations */
+.carousel-item.active .slide-up { animation: fadeInUp 0.8s forwards; }
+.carousel-item.active .slide-up-delay { animation: fadeInUp 0.8s forwards 0.3s; opacity: 0; }
+.carousel-item.active .slide-up-delay-2 { animation: fadeInUp 0.8s forwards 0.6s; opacity: 0; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Scaling */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .display-1 { font-size: 3.5rem; }
+}
+
+@media (max-width: 768px) {
+    .display-1 { font-size: 2.5rem !important; }
+    .carousel-caption { top: 20%; }
+    .slide-up-delay-2 .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hero section  */
+/* --- Hero Layout --- */
+/* --- Hero Container --- */
+.hero-viewport {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: #0a1f38; /* Dark fallback */
+    scroll-snap-align: start;
+}
+
+/* --- Media Handling --- */
+.hero-media-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Subtle slow zoom animation for a living feel */
+    animation: slowKenBurns 30s infinite alternate linear;
+}
+
+/* Subtle dark gradient at the bottom for navigation visibility */
+.hero-bottom-vignette {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(10, 31, 56, 0.4) 0%, transparent 100%);
+}
+
+/* --- Mouse Scroll Navigation --- */
+.hero-scroll-trigger {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.hero-scroll-trigger:hover {
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.mouse-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mouse-frame {
+    width: 28px;
+    height: 46px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.mouse-wheel {
+    width: 4px;
+    height: 10px;
+    background: #007bff; /* Professional Blue Accent */
+    border-radius: 2px;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: mouseSlide 2s infinite;
+}
+
+.mouse-hint {
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 4px;
+    opacity: 0.8;
+}
+
+/* --- Animations --- */
+@keyframes mouseSlide {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, 18px); opacity: 0; }
+}
+
+@keyframes slowKenBurns {
+    from { transform: scale(1); }
+    to { transform: scale(1.15); }
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+    .mouse-hint { font-size: 10px; letter-spacing: 3px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Land Section Styling */
+/* Typography and Utility */
+/* Light Theme Variables & Styles */
+/* About Us Specifics */
+/* --- Architectural About Section Styles --- */
+/* --- Editorial Redesign Styles --- */
+
+/* --- Neo-Minimalist About Styles --- */
+/* --- Executive Design Variables --- */
+/* Ensure the snap section allows for vertical spacing */
+.snap-section {
+    height: 100vh;
+    min-height: 800px; /* Prevents content squishing on short browser windows */
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+padding-top: 100px;    
+        padding-bottom: 80px;
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+    .snap-section {
+        height: auto !important; /* Allow section to grow with content */
+        min-height: auto;
+        scroll-snap-align: none;
+        /* padding-top: 100px;    */
+        padding-top: 0px;    
+        padding-bottom: 80px;  /* Bottom breathing room */
+        overflow: visible;
+    }
+    
+    .display-3 {
+        font-size: calc(1.5rem + 3.3vw); /* Fluid typography */
+        margin-bottom: 1.5rem !important;
+    }
+}
+
+/* Adjusting the content padding for extra-large screens */
+@media (min-width: 1200px) {
+    .px-xl-7 {
+        padding-left: 8% !important;
+        padding-right: 8% !important;
+    }
+}
+/* --- High-End Spacing & Layout --- */
+.py-md-7 {
+    padding-top: 6.5rem !important;
+    padding-bottom: 6.5rem !important;
+}
+
+.px-xl-8 {
+    padding-left: 15% !important;
+    padding-right: 15% !important;
+}
+
+/* --- Map Viewport Handling --- */
+.map-viewport {
+    min-height: 100vh;
+}
+
+.locality-card-clean {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 2px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    z-index: 5;
+    max-width: 350px;
+}
+
+/* --- Form Aesthetics --- */
+.luxe-field {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    border-radius: 0;
+    padding-left: 0;
+    padding-bottom: 10px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.luxe-field:focus {
+    box-shadow: none;
+    border-color: #007bff;
+}
+
+.text-blue-outline-thin {
+    color: transparent;
+    -webkit-text-stroke: 1px #007bff;
+}
+
+.shadow-premium {
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* --- Mobile Spacing Fix --- */
+@media (max-width: 991px) {
+    #locality-contact {
+        height: auto;
+        scroll-snap-align: none;
+    }
+    .map-viewport {
+        height: 80vh; /* Focus on map visibility */
+        min-height: auto;
+    }
+    .locality-card-clean {
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        padding: 20px;
+    }
+    .form-wrapper {
+        padding: 4rem 1.5rem !important; /* Proper breathing room on mobile */
+    }
+}
+
+
+.luxury-form-card {
+    background: #ffffff;
+    padding: 60px 50px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.16);
+
+    /* Stronger visible shadow */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.22),
+        0 10px 20px rgba(0, 0, 0, 0.28);
+
+    max-width: 520px;
+    margin: 0 auto;
+    transition: all 0.4s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* gallery section  */
+
+.visual-inventory {
+    background-color: #ffffff;
+}
+
+.visual-inventory__accent-line {
+    width: 30px;
+    height: 1px;
+    background-color: var(--primary);
+}
+
+.visual-inventory__subtitle {
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* --- Visual Card Block --- */
+.visual-card {
+    margin: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.visual-card__wrapper {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Perfectly square for a unified grid */
+    overflow: hidden;
+    background: #000; /* Dark base for the image contrast */
+}
+
+.visual-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: transform 0.8s cubic-bezier(0.2, 0, 0.2, 1), opacity 0.5s ease;
+}
+
+/* Interaction: Focus on Hover */
+.visual-card:hover .visual-card__img {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Optional: Fade out siblings when grid is hovered */
+.visual-inventory__grid:hover .visual-card:not(:hover) .visual-card__img {
+    opacity: 0.5;
+    filter: grayscale(30%);
+}
+
+/* --- Utility: Scroll Snap --- */
+.u-scroll-snap {
+    height: 100vh;
+    min-height: 850px;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 991px) {
+    .u-scroll-snap {
+        height: auto !important;
+        padding: 80px 0;
+    }
+    .visual-card__wrapper {
+        aspect-ratio: 4 / 3; /* Better fit for mobile screens */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Document Showcase Block --- */
+/* --- PDF Showcase Block (BEM) --- */
+.pdf-showcase {
+    background-color: #ffffff;
+}
+
+.pdf-showcase__label {
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+    color: var(--primary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* The "Reader" Frame */
+.pdf-showcase__frame {
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 40px 100px rgba(0,0,0,0.08);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.pdf-showcase__toolbar {
+    background: #eeeeee;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.pdf-showcase__controls span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-right: 6px;
+}
+
+.pdf-showcase__filename {
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: #888;
+}
+
+/* Scrollable Viewport */
+.pdf-showcase__viewport {
+    height: 55vh; /* Fixed height for the "Reader" look */
+    overflow-y: scroll;
+    position: relative;
+    background: #525659; /* Classic PDF viewer background */
+}
+
+/* Custom Scrollbar */
+.pdf-showcase__viewport::-webkit-scrollbar { width: 8px; }
+.pdf-showcase__viewport::-webkit-scrollbar-thumb { background: var(--primary); }
+
+.pdf-showcase__img {
+    width: 100%;
+    display: block;
+}
+
+.pdf-showcase__hint {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+}
+
+/* Button Modifiers */
+.pdf-showcase__btn {
+    text-decoration: none;
+    font-weight: 700;
+    padding: 16px 40px;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.pdf-showcase__btn--primary {
+    background: var(--dark);
+    color: white;
+}
+
+.pdf-showcase__btn--outline {
+    border: 1px solid var(--dark);
+    color: var(--dark);
+}
+
+.pdf-showcase__btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Responsive Overrides */
+@media (max-width: 991px) {
+    .pdf-showcase { height: auto !important; }
+    .pdf-showcase__viewport { height: 400px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Lightbox Overlay */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+}
+
+/* Close Button */
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Navigation Buttons */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    padding: 20px;
+}
+
+.lightbox-prev { left: 40px; }
+.lightbox-next { right: 40px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    color: var(--primary);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
