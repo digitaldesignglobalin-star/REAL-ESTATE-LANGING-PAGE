@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
   phoneInput.addEventListener("input", validateForm);
   emailInput.addEventListener("input", validateForm);
 
-  form.addEventListener("submit", function (e) {
+ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   if (!downloadBtn.disabled) {
@@ -173,19 +173,21 @@ document.addEventListener("DOMContentLoaded", function () {
     link.click();
     document.body.removeChild(link);
 
-    // 🔹 2. Close Modal
-    const modal = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
+    // 🔹 2. Open PDF in NEW TAB
+    window.open(pdfUrl, "_blank");
+
+    // 🔹 3. Close Modal
+    const modal = bootstrap.Modal.getInstance(
+      document.getElementById("downloadModal")
+    );
     modal.hide();
 
-    // 🔹 3. Redirect after small delay
-    setTimeout(() => {
-      window.location.href = pdfUrl;
-    }, 800);
-
+    // 🔹 4. Reset Form
     form.reset();
     downloadBtn.disabled = true;
   }
 });
+
 
 
 });
