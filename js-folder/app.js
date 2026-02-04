@@ -159,21 +159,34 @@ document.addEventListener("DOMContentLoaded", function () {
   emailInput.addEventListener("input", validateForm);
 
   form.addEventListener("submit", function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    if (!downloadBtn.disabled) {
+  if (!downloadBtn.disabled) {
 
-      // Start Download
-      window.location.href = "assets/UTTAR GAURIPUR - PROJECT PLAN.pdf";
+    const pdfUrl = "assets/UTTAR GAURIPUR - PROJECT PLAN.pdf";
 
-      // Close Modal
-      const modal = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
-      modal.hide();
+    // 🔹 1. Trigger Download
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Lakeview_Township_Brochure.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
-      form.reset();
-      downloadBtn.disabled = true;
-    }
-  });
+    // 🔹 2. Close Modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('downloadModal'));
+    modal.hide();
+
+    // 🔹 3. Redirect after small delay
+    setTimeout(() => {
+      window.location.href = pdfUrl;
+    }, 800);
+
+    form.reset();
+    downloadBtn.disabled = true;
+  }
+});
+
 
 });
 
